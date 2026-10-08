@@ -54,11 +54,11 @@ function Contacts() {
                         console.log(error.text);
                     });
             } else {
-                setErrMsg('Invalid email');
+                setErrMsg('E-mail inválido');
                 setOpen(true);
             }
         } else {
-            setErrMsg('Enter all the fields');
+            setErrMsg('Preencha todos os campos');
             setOpen(true);
         }
     };
@@ -70,7 +70,7 @@ function Contacts() {
             style={{ backgroundColor: theme.secondary }}
         >
             <div className={styles.contactsContainer}>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
+                <h1 style={{ color: theme.primary }}>Contato</h1>
                 <div className={styles.contactsBody}>
                     <div className={styles.contactsForm}>
                         <form ref={form} onSubmit={handleContactForm}>
@@ -82,7 +82,7 @@ function Contacts() {
                                     Name
                                 </label>
                                 <input
-                                    placeholder='John Doe'
+                                    placeholder='Seu nome'
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
@@ -104,7 +104,7 @@ function Contacts() {
                                     Email
                                 </label>
                                 <input
-                                    placeholder='John@doe.com'
+                                    placeholder='seu@email.com'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
@@ -126,7 +126,7 @@ function Contacts() {
                                     Message
                                 </label>
                                 <textarea
-                                    placeholder='Type your message....'
+                                    placeholder='Digite sua mensagem...'
                                     value={message}
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
@@ -144,7 +144,7 @@ function Contacts() {
                                     className="bg-[#1D9BF0] 
                                     hover:bg-[#8B98A5] text-[#15202B]
                                      transition delay-200 ">
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                    <p>{!success ? 'Enviar' : 'Enviado'}</p>
                                     <div className={styles.submitIcon}>
                                         <AiOutlineSend
                                             className={styles.sendIcon}

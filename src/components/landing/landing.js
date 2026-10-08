@@ -103,9 +103,9 @@ function Landing() {
                         <h1>{headerData.name}</h1>
                         <Typed
                             strings={[
-                                'Backend Developer',
-                                'Frontend Developer',
-                                'Fullstack Developer']}
+                                'Estudante de Ciência da Computação',
+                                'Desenvolvedor Python em formação',
+                                'Técnico de Suporte em TI']}
                             typeSpeed={40}
                             backSpeed={50}
                             className={styles.typedHeader}
@@ -118,7 +118,7 @@ function Landing() {
                             {headerData.resumePdf && (
                                 <a
                                     href={headerData.resumePdf}
-                                    download='resume'
+                                    download='curriculo'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
@@ -130,7 +130,7 @@ function Landing() {
                                         hover:bg-[#8B98A5] hover:text-[#15202B]
                                          hover:border-[#8B98A5] "
                                     >
-                                        Download CV
+                                        Baixar currículo
                                     </button>
                                 </a>
                             )}
@@ -144,7 +144,7 @@ function Landing() {
                                  ease-out hover:bg-[#8B98A5] hover:text-[#15202B]
                                   hover:border-[#8B98A5] hidden sm:block "
                                 >
-                                    Contact
+                                    Contato
                                 </button>
                             </Link>
                         </div>

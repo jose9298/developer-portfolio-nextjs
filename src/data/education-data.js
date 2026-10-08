@@ -1,23 +1,16 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Noakhali Government College',
-        course: 'Bachelor Degree',
-        startYear: '2020',
-        endYear: 'Present'
+        institution: 'Centro Universitário de Ensino Superior do Amazonas – CIESA',
+        course: 'Bacharelado em Ciência da Computação',
+        startYear: '2026',
+        endYear: '2029'
     },
     {
         id: 2,
-        institution: 'Noakhali Islamia Kamil Madrasah',
-        course: 'Higher Secondary',
-        startYear: '2018',
-        endYear: '2020'
-    },
-    {
-        id: 3,
-        institution: 'Baitus Saif Islamia Madrasah',
-        course: 'Secondary School',
-        startYear: '2008',
-        endYear: '2018'
+        institution: 'Universidade Metropolitana de Manaus – FAMETRO',
+        course: 'Bacharelado em Sistemas de Informação',
+        startYear: '',
+        endYear: '2025'
     },
 ]

@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 import placeholder from '../../../assets/png/placeholder.png';
 import styles from '../../../styles/singleProject.module.css';
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+function SingleProject({ id, name, desc, tags, code, demo, image, status, theme }) {
 
 
     return (
@@ -15,6 +15,14 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 className={styles.singleProject}
                 style={{ backgroundColor: theme.quaternary }}
             >
+                {status && (
+                    <span
+                        className="absolute top-3 left-3 z-10 px-3 py-1 rounded-full text-xs font-semibold"
+                        style={{ backgroundColor: theme.primary, color: theme.secondary }}
+                    >
+                        {status}
+                    </span>
+                )}
                 <div className={styles.projectContent}>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
@@ -24,44 +32,48 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     </h2>
                     <Image src={image ? image : placeholder} alt={name} />
                     <div className={styles.projectShowcaseBtn}>
-                        <a
-                            href={demo}
-                            target='_blank'
-                            rel='noreferrer'
-                            className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
+                        {demo && (
+                            <a
+                                href={demo}
+                                target='_blank'
+                                rel='noreferrer'
+                                className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
+                                aria-labelledby={`${name
                                     .replace(' ', '-')
-                                    .toLowerCase()}-demo`}
-                        >
-                            <FaPlay
-                                id={`${name
+                                    .toLowerCase()} ${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-demo`}
+                            >
+                                <FaPlay
+                                    id={`${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-demo`}
+                                    className="text-[1.1rem] transition"
+                                    aria-label='Demo'
+                                />
+                            </a>
+                        )}
+                        {code && (
+                            <a
+                                href={code}
+                                target='_blank'
+                                rel='noreferrer'
+                                className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
+                                aria-labelledby={`${name
                                     .replace(' ', '-')
-                                    .toLowerCase()}-demo`}
-                                className="text-[1.1rem] transition"
-                                aria-label='Demo'
-                            />
-                        </a>
-                        <a
-                            href={code}
-                            target='_blank'
-                            rel='noreferrer'
-                            className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-code`}
-                        >
-                            <FaCode
-                                id={`${name
-                                    .replace(' ', '-')
-                                    .toLowerCase()}-code`}
-                                className="text-[1.1rem] transition"
-                                aria-label='Code'
-                            />
-                        </a>
+                                    .toLowerCase()} ${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-code`}
+                            >
+                                <FaCode
+                                    id={`${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-code`}
+                                    className="text-[1.1rem] transition"
+                                    aria-label='Code'
+                                />
+                            </a>
+                        )}
                     </div>
                 </div>
                 <p

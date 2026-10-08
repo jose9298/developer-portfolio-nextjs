@@ -42,7 +42,7 @@ function Blog({blogs}) {
                                     <button
                                         className="text-[#15202B] bg-[#8B98A5] 
                                     hover:bg-[#1D9BF0] transition-colors">
-                                        View All
+                                        Ver todos
                                         <HiArrowRight
                                             className="text-[#8B98A5] bg-[#15202B] 
                                         w-[40px] h-[40px] p-2 text-base 

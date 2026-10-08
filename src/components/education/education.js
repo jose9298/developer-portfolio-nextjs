@@ -1,11 +1,13 @@
+import dynamic from 'next/dynamic';
 import { Container } from '@material-ui/core';
 import React, { useContext } from 'react';
 import education from '../../assets/lottie/education.json';
 import { ThemeContext } from '../../contexts/theme-context';
 import { educationData } from '../../data/education-data';
 import styles from '../../styles/education.module.css';
-import AnimationLottie from '../animation';
 import EducationCard from './education-card';
+
+const AnimationLottie = dynamic(() => import('../animation'), { ssr: false });
 
 
 function Education() {
@@ -19,7 +21,7 @@ function Education() {
                         <AnimationLottie animationPath={education} />
                     </div>
                     <div className={styles.educationDescription}>
-                        <h1 style={{ color: theme.primary }}>Education</h1>
+                        <h1 style={{ color: theme.primary }}>Formação</h1>
                         {educationData.map(edu => (
                             <EducationCard
                                 key={edu.id}

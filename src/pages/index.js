@@ -5,6 +5,7 @@ import {
 } from '../components';
 import BackToTop from '../components/back-to-top/back-to-top';
 import ChangeTheme from '../components/change-theme/change-theme';
+import { contactsData } from '../data/contacts-data';
 
 function HomePage({ blogs }) {
 
@@ -26,7 +27,11 @@ function HomePage({ blogs }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://dev.to/api/articles?username=said7388');
+  if (!contactsData.devUsername) {
+    return { props: { blogs: [] } };
+  }
+
+  const res = await fetch(`https://dev.to/api/articles?username=${contactsData.devUsername}`);
   const data = await res.json();
   const filteredBlogs = data.sort(() => Math.random() - 0.5);
 

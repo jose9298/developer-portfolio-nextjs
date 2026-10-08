@@ -1,9 +1,9 @@
 
 export const headerData = {
-    name: 'ABU SAID',
-    title: "Hello! I am",
-    desciption: "Hello! I am ABU SAID, a professional and passionate programmer in my daily life. A quick learner with a self-learning attitude. I love to learn and explore new technologies and am Passionate about Problem Solving. ",
-    image: 'https://i.ibb.co/ZmdNH6x/abu-said.jpg',
-    imagebw: 'https://i.ibb.co/Cw2Xp90/abu-said-bw.jpg',
-    resumePdf: 'https://docs.google.com/document/d/1MkkoRX98FS47CaEyeodyPzi4OkW8SH7Gv55f4MQkHV8/'
+    name: 'JOSÉ SOUZA',
+    title: "Olá! Eu sou",
+    desciption: "Olá! Eu sou José Souza, tenho 22 anos e sou estudante de Ciência da Computação. Estou construindo minha base em tecnologia com foco em Python, SQL e lógica de programação, e busco minha primeira oportunidade de estágio em desenvolvimento de software ou dados.",
+    image: 'https://avatars.githubusercontent.com/jose9298',
+    imagebw: 'https://avatars.githubusercontent.com/jose9298',
+    resumePdf: ''
 }

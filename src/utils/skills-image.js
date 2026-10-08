@@ -123,6 +123,7 @@ export const skillsImage = (skill) => {
             return memsql;
         case 'mongodb':
             return mongoDB;
+        case 'sql':
         case 'mysql':
             return mysql;
         case 'postgresql':

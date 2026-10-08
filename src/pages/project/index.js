@@ -5,7 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { SingleProject } from '../../components';
 import Link from '../../components/link';
 import { ThemeContext } from '../../contexts/theme-context';
-import { projectsData } from '../../data/projectsData';
+import { projectsData } from '../../data/projects-data';
 
 function ProjectPage() {
     const [search, setSearch] = useState('')
@@ -69,13 +69,13 @@ function ProjectPage() {
                 <Link href="/">
                     <AiOutlineHome className={classes.home} />
                 </Link>
-                <h1 style={{ color: theme.secondary }}>Projects</h1>
+                <h1 style={{ color: theme.secondary }}>Projetos</h1>
             </div>
             <div className="projectPage-container">
                 <div className="projectPage-search">
                     <input type="text" value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        placeholder="Search project..."
+                        placeholder="Buscar projeto..."
                         className={classes.search} />
                 </div>
                 <div className="project-container">
@@ -93,6 +93,7 @@ function ProjectPage() {
                                 code={project.code}
                                 demo={project.demo}
                                 image={project.image}
+                                status={project.status}
                             />
                         ))}
                     </Grid>

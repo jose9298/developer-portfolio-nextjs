@@ -1,10 +1,12 @@
+import dynamic from 'next/dynamic';
 import { Container } from '@material-ui/core';
 import React, { useContext } from 'react';
 import codings from '../../assets/lottie/coding.json';
 import { ThemeContext } from '../../contexts/theme-context';
 import { aboutData } from '../../data/about-data';
 import styles from '../../styles/about.module.css';
-import AnimationLottie from '../Animation';
+
+const AnimationLottie = dynamic(() => import('../animation'), { ssr: false });
 
 
 function About() {
